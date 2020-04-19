@@ -1,10 +1,11 @@
 <div class="container">
+	<%= link_to('test', root_path, remote: true, data: {type: :json})%>
+	<div class="random"></div>
 	<h5>DANH MỤC</h5>
 	<div class="most-poducts">
 		<div class="row">
 			<a href="#" class="col-md-3">
 				<div class="a-product">
-					<%= image_tag Product.last.images.first.url, class: 'img-product' %>
 					<div>
 						<p>Ốp lưng iphone CHỐNG BẨN</p>
 						<p>25.000</p>
