@@ -1,0 +1,8 @@
+<%= form_for @author do |f| %>
+	<%= f.text_field :name  %>
+	<%= f.text_field :age  %>
+	<%= f.fields_for :books do |book_form| %>
+		<%= book_form.text_field :title %>
+	<% end %>
+	<%= f.submit 'New'  %>
+<% end %>

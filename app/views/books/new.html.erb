@@ -1,0 +1,7 @@
+<%= form_for @book do |f| %>
+	<%= f.text_field :title  %>
+  <%= f.fields_for :author, Author.new do |author_form| %>
+    <%= author_form.text_field :name, :class => 'required' -%><span class="req">*</span>
+	 <% end %>
+	<%= f.submit 'New'  %>
+<% end %>
