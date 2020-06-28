@@ -5,10 +5,14 @@ OAuth2 là một phương thức chứng thực, mà nhờ đó một web servic
 #### Work flow của Google OAuth2
 ##### Step 1: Tạo request
 Để tương tác với Google OAuth server đầu tiên ứng dụng của chúng ta cần phải tạo 1 requet với giao thức https ví dụ: [request example](https://accounts.google.com/signin/oauth/oauthchooseaccount?access_type=offline&client_id=193271024968-2dcvl591baoh326bkf0ddml1f9ai3n2f.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fgoogle_oauth2%2Fcallback&response_type=code&scope=email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly&state=6ff85a4bb459fce71b26065460f0d68bb18aa8f849375448&o2v=1&as=P0lxMkHnM4AXSm1jegJRSw&flowName=GeneralOAuthFlow). Ở đây chúng ta sẽ set các parameters, chúng ta sẽ tập phân tích các params chính  như sau:
-	- client_id: cilent id của google app mà chúng ta đã tạo ở mục trên
-	- redirect_uri: nơi sẽ xử lý response từ google server mà chúng ta đã thêm vào mục Authorized redirect URIs  ở google app(http://localhost:3000/auth/google_oauth2/callback trong ví dụ này)
-	- response_type: Xác định kiểu dữ liệu mà google oauth server trả về, chúng ta sẽ sử dụng là code.
-	- scope: Các quyền mà ứng dụng cần người dùng cung cấp.
+
+- client_id: cilent id của google app mà chúng ta đã tạo ở mục trên
+
+- redirect_uri: nơi sẽ xử lý response từ google server mà chúng ta đã thêm vào mục Authorized redirect URIs ở google app(http://localhost:3000/auth/google_oauth2/callback trong ví dụ này)
+
+- response_type: Xác định kiểu dữ liệu mà google oauth server trả về, chúng ta sẽ sử dụng là code.
+
+- scope: Các quyền mà ứng dụng cần người dùng cung cấp.
 ##### Step 2: Xử lý reponse trả về
 Sau khi ứng dụng gửi request 1 popup sẽ hiển thị yêu cầu người dùng đăng nhập và cấp quyền truy cập tài nguyên cho ứng dụng. Nếu người dùng đồng ý thì google oauth sẽ trả về một authorization code response. `https://oauth2.example.com/auth?code=4/P7q7W91a-oMsCeLvIaQm6bTrgtp7`
 Còn nếu người dùng từ chối thì google oauth sẽ trả về một message error: `https://oauth2.example.com/auth?error=access_denied
