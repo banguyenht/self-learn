@@ -9,25 +9,13 @@ Lập trình hướng đối tượng là một kỹ thuật lập trình  mà �
   **Kế  thừa** cho phép một class có thể  kế thừa các attribute và behavior từ một class khác đồng thời có thêm các attribute và behavior của riêng chúng, ví dụ: 1 class **Animal** có các thuộc tính như sau: *tên*, *tuổi*, *màu sắc* và các hành vi: *ăn*, *uống* và nếu một class **Person** kế thừa class Animal này thì có nghĩa rằng Person sẽ hiển nhiên có các thuộc tính tên*, *tuổi*, *màu sắc* và các hành vi: *ăn*, *uống* , ngoài ra có thể  có thêm thuộc tính khác như *nghề nghiệp* chẳng hạn. Với tính chất này thì code của chúng ta sẽ trở nên reuseable(tái sử dụng) phải không?
 
 **Tính trừu tượng**
-
-  **Trừu tượng**  có nghĩa là bỏ qua các chi tiết, chỉ tập trung vào các thuộc tính và hành vi quan trọng, ví dụ: Nếu làm một bài toán liên quan đến quản lý nhân viên trong công ty thì chúng ta sẽ chỉ trung vào vào các đặc điểm: *tên*, *tuổi*, *kinh nghiệm*, *kĩ năng* và bỏ qua những chi tiết khác như màu da, màu tóc.
+  **Trừu tượng**  có nghĩa là bỏ qua các chi tiết, chỉ tập trung vào các thuộc tính và hành vi quan trọng, ví dụ: Nếu làm một bài toán liên quan đến quản lý nhân   viên trong công ty thì chúng ta sẽ chỉ trung vào vào các đặc điểm: *tên*, *tuổi*, *kinh nghiệm*, *kĩ năng* và bỏ qua những chi tiết khác như màu da, màu tóc.
 
 **Tính đa hình**
-
-  Dù là cùng một hành động nhưng mỗi đối tượng lại có một cách thực hiện khác nhau đó chính là **Đa hình** ví dụ: cùng là một hành động ăn nhưng với động vật thì nó cứ thế cho thức ăn vào miệng rồi ăn nhưng còn đối với con người thì phải chế biến thức ăn thức ăn trước rồi mới đưa vào miệng.
-  
+ Dù là cùng một hành động nhưng mỗi đối tượng lại có một cách thực hiện khác nhau đó chính là **Đa hình** ví dụ: cùng là một hành động ăn nhưng với động vật thì     nó cứ thế cho thức ăn vào miệng rồi ăn nhưng còn đối với con người thì phải chế biến thức ăn thức ăn trước rồi mới đưa vào miệng.
 **Tính đóng gói**
-
-  Trong một class các thuộc tính và phương thức sẽ có thể được che giấu khỏi sự xâm nhập của bên ngoài. Có 3 cấp độ của tính đóng gói như sau:
-
-    -Private: các thuộc tính và phương thức chỉ được truy cập ở bên trong class đó.
-
-    -Protected: các thuộc tính và phương thức chỉ được truy cập ở bên trong class đó và các class kế thừa từ nó.
-
-    -Public: các thuộc tính và phương thức được truy cập từ mọi nơi trong chương trình.
-
+  Là tính chất cho phép một class ẩn dấu các thuộc tính và phương thức từ bên ngoài class đó.
 #### Message trong lập trình hướng đối tượng
-
   Trong lập trình hướng đối tượng thì các object sẽ tương tác với nhau thông qua các message.
   Ví dụ chúng ta có các class như sau:
   ```
@@ -49,9 +37,11 @@ Lập trình hướng đối tượng là một kỹ thuật lập trình  mà �
     end
   end
 
-   class OtherClass
+  class OtherClass
+   def other_method
     test = Test.new
     test.animal_name
+   end
   end
   ```
-  Hãy chú ý đến dòng `dog_name = dog.name`(1) ở câu lệnh này `name` là message được gửi đi còn `dog` là receiver còn sender sẽ là một một object của class Test được tạo ra ở OtherClass.
+Hãy chú ý đến dòng `dog_name = dog.name`(1) ở câu lệnh này `name` là message được gửi đi còn `dog` là receiver còn sender sẽ là một một object của class Test được tạo ra ở OtherClass.
