@@ -1,6 +1,6 @@
 #### Lập trình hướng đối tượng là gì?
 
-Lập trình hướng đối tượng là một kỹ thuật lập trình  mà ở đó lập trình viên sẽ nắm bắt và phân tích các thực thế , sự việc của đời sống ánh xạ vào chương trình phần mềm của mình. Các đối tượng sẽ được mô tả bằng class trong lập trình, class sẽ bao gồm các thuộc tính(attribute) và các phương thức(behavior) của đối tượng. Từ class chúng ta sẽ tạo ra các thể hiện của class đó gọi là các object và các object này sẽ tương tác với nhau thông qua các message trong chương trình của chúng ta.
+Lập trình hướng đối tượng là một kỹ thuật lập trình  mà ở đó lập trình viên sẽ nắm bắt và phân tích các thực thế, sự việc của đời sống ánh xạ vào chương trình phần mềm của mình. Các đối tượng sẽ được mô tả bằng class trong lập trình, class sẽ bao gồm các thuộc tính(attribute) và các phương thức(behavior) của đối tượng. Từ class chúng ta sẽ tạo ra các thể hiện của class đó gọi là các object và các object này sẽ tương tác với nhau thông qua các message trong chương trình của chúng ta.
 
 #### Các tính chất của lập trình hướng đối tượng
 
@@ -14,7 +14,7 @@ Lập trình hướng đối tượng là một kỹ thuật lập trình  mà �
 **Tính đa hình**
  Dù là cùng một hành động nhưng mỗi đối tượng lại có một cách thực hiện khác nhau đó chính là **Đa hình** ví dụ: cùng là một hành động ăn nhưng với động vật thì     nó cứ thế cho thức ăn vào miệng rồi ăn nhưng còn đối với con người thì phải chế biến thức ăn thức ăn trước rồi mới đưa vào miệng.
 **Tính đóng gói**
-  Là tính chất cho phép một class ẩn dấu các thuộc tính và phương thức từ bên ngoài class đó.
+  Là tính chất cho phép một class ẩn dấu các thuộc tính và phương thức khỏi sự truy cập từ bên ngoài class đó.
 #### Message trong lập trình hướng đối tượng
   Trong lập trình hướng đối tượng thì các object sẽ tương tác với nhau thông qua các message.
   Ví dụ chúng ta có các class như sau:
@@ -44,4 +44,4 @@ Lập trình hướng đối tượng là một kỹ thuật lập trình  mà �
    end
   end
   ```
-Hãy chú ý đến dòng `dog_name = dog.name`(1) ở câu lệnh này `name` là message được gửi đi còn `dog` là receiver còn sender sẽ là một một object của class Test được tạo ra ở OtherClass.
+Hãy chú ý đến dòng `dog_name = dog.name` ở câu lệnh này `name` là message được gửi đi còn `dog` là receiver còn sender sẽ là một một object của class Test được tạo ra ở OtherClass.
